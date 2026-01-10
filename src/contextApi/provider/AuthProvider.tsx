@@ -42,9 +42,7 @@ const AuthProvider = ({ children }: PropsWithChildren) => {
       }, 1000);
     });
 
-    subscribe;
-
-    return subscribe;
+    return () => subscribe();
   }, [fetchUser]);
 
   const signin = useCallback(
